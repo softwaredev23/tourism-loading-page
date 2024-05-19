@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+    height: 100vh;
+    color: #fff;
+}
+.loading-page{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, #000,#000,#000);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 1px 1px 25px 1px rgba(220, 186, 5, 1), 1px 1px 25px 1px rgba(220, 186, 5, 1), 1px 1px 25px 1px rgba(220, 186, 5, 1);
+    border-radius: 50%;
+}
+#logo{
+    height: 200px;
+    width: 200px;
+    stroke: #fff;
+    fill-opacity: 0;
+    stroke-width: 3px;
+    animation: draw 8s ease;
+    stroke-dasharray: 4500;
+}
+@keyframes draw{
+    0%{
+        stroke-dashoffset: 4500;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
